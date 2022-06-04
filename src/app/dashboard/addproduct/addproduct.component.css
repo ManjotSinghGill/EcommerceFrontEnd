@@ -1,0 +1,20 @@
+.registerform{
+    padding: 5vw 15vw;
+    
+}
+
+.registerationHeader{
+    padding: 0.5vw;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+.form{
+    padding: 2.5vw 5vw;
+    background-color: rgb(251, 251, 251);
+    border-radius: 20px;
+}
+
+form{
+    padding: 2.5vh;
+}

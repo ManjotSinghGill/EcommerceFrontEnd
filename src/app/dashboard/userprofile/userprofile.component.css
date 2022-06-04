@@ -1,0 +1,12 @@
+.profilebg{
+    display: flex;
+    padding: 5rem 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/signup_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card{
+    margin: 0 10vw;
+}

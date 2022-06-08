@@ -15,6 +15,7 @@ import { RegisterComponent } from './register/register.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { PartnerprofileComponent } from './partnerprofile/partnerprofile.component';
+import { PartnerloginComponent } from './partnerlogin/partnerlogin.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { PartnerprofileComponent } from './partnerprofile/partnerprofile.compone
     RegisterComponent,
     AddproductComponent,
     UserprofileComponent,
-    PartnerprofileComponent
+    PartnerprofileComponent,
+    PartnerloginComponent
   ],
   imports: [
     CommonModule,

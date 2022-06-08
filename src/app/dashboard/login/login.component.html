@@ -107,10 +107,11 @@
             </div>
           
             <!-- Submit button -->
-            <button type="button" class="btn btn-primary btn-block mb-4" (click)="onSubmit(loginForm.form.value)">Sign in</button>
+            <button type="button" class="btn btn-primary btn-block mb-4" (click)="onLogin(loginForm.form.value)">Sign in</button>
           
             <!-- Register buttons -->
             <div class="text-center">
+                <p>Are you a partner? <a [routerLink]="['/partnerlogin']">Log as Partner</a></p>  
               <p>Not a member? <a [routerLink]="['/register']">Register</a></p>
               <p>or sign up with:</p>
               <button type="button" class="btn btn-link btn-floating mx-1">

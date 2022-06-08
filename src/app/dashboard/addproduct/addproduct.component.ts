@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-addproduct',
@@ -7,12 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddproductComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(form: any){
-    console.log(form)
+    let url = environment.baseUrl + "product";
+    let data = form;
+    this.http.post<any>(url, data).subscribe(res => console.log(res));
   }
 }

@@ -18,5 +18,6 @@ export class AddproductComponent implements OnInit {
     let url = environment.baseUrl + "product";
     let data = form;
     this.http.post<any>(url, data).subscribe(res => console.log(res));
+    this.ngOnInit();
   }
 }

@@ -1,0 +1,27 @@
+.registerform{
+    padding: 5vw 15vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/signup_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.registerationHeader{
+    padding: 0.5vw;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+h2{
+    color: white;
+}
+
+.form{
+    padding: 2.5vw 5vw;
+    background-color: rgb(251, 251, 251);
+    border-radius: 20px;
+}
+
+form{
+    padding: 2.5vh;
+}

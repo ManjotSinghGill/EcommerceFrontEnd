@@ -15,14 +15,36 @@ export class CartComponent implements OnInit {
   }
 
   removeCartItem(item: any){
-    for( var i = 0; i < this.cart.listofItems.length; i++){
-      if(this.cart.listofItems[i] == "item"){
-        this.cart.listofItems.splice(i, 1);
-        localStorage.setItem("cart", this.cart);
-        this.ngOnInit();
-      }
+    var index = this.cart.listOfItems.indexOf(item);
+    if(index !== -1){
+      this.cart.total_price = this.cart.total_price - (this.cart.listOfItems[index].count * this.cart.listOfItems[index].price); 
+      this.cart.listOfItems.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(this.cart));
+      this.ngOnInit();
+      window.alert("Item has been removed!")
     }
   }
   
 
+  increment(item: any){
+    var index = this.cart.listOfItems.indexOf(item);
+    if(index != -1){
+      this.cart.listOfItems[index].count +=1
+      this.cart.total_price += item.price;
+      localStorage.setItem("cart", JSON.stringify(this.cart));
+      this.ngOnInit();
+      return;
+    }
+  }
+
+  decrement(item: any){
+    var index = this.cart.listOfItems.indexOf(item);
+    if(index != -1){
+      this.cart.listOfItems[index].count -=1
+      this.cart.total_price -= item.price;
+      localStorage.setItem("cart", JSON.stringify(this.cart));
+      this.ngOnInit();
+      return;
+    }
+  }
 }

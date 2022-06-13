@@ -25,12 +25,14 @@ export class RegisterComponent implements OnInit {
       let url = environment.baseUrl + "user"
       this.http.post(url, form).subscribe(res =>{
       console.log(res);
+      window.alert("Regestrired Successfully");
     })
     }
     else{
       let url = environment.baseUrl + "partner"
       this.http.post(url, form).subscribe(res =>{
       console.log(res);
+      window.alert("Regestrired Successfully");
     })
     }
   }
